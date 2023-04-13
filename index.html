@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">Memory Game</div>
+        <div class="navbar-items">
+          <div class="navbar-item">Attempts: <span id="attempts">0</span></div>
+          <div class="navbar-item">Time: <span id="timer">00:00</span></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <button class="start-btn" onclick="startGame()">Start Game</button>
+      <div id="gameBoard"></div>
+      <form id="userInputForm" onsubmit="checkInput()">
+        <br><br>
+        <label for="userInput">Enter the remembered items:</label>
+        <input type="text" name="userInput" id="userInput">
+        <button type="submit">Submit</button>
+      </form>
+      <div id="result"></div>
+      <h2 style="text-align: center;">Feedback</h2>
+      <form id="feedbackForm">
+        <br>
+        <label>What memory strategies did you use?</label><br>
+        <div class="checkbox-group">
+          <input type="checkbox" name="strategy" value="Visualizing"><span>Visualizing</span><br>
+          <input type="checkbox" name="strategy" value="Grouping"><span>Grouping</span><br>
+          <input type="checkbox" name="strategy" value="Repeating"><span>Repeating</span><br>
+          <input type="checkbox" name="strategy" value="Other"><span>Other:</span><input type="text" name="otherStrategy"><br>
+        </div>
+        <label for="bestStrategy">Which strategies worked best for you?</label><br>
+        <textarea name="bestStrategy" id="bestStrategy"></textarea><br>
+        <button type="submit">Submit</button>
+      </form> 
+    </main>   
+    <script src="main.js"></script>
+  </body>
+</html>
